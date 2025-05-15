@@ -38,7 +38,9 @@ const Navbar = () => {
         </Typography>
         <Button color="inherit" href="/blog">Blog</Button>
         <Button color="inherit" href="/add-blog">Add Blog</Button>
-        <Button color="inherit" href="/logout">Logout</Button>
+        <Button color="inherit" href="/logout" onClick={()=>{
+          sessionStorage.removeItem('logintoken');
+        }}>Logout</Button>
       </Toolbar>
     </AppBar>
   );
